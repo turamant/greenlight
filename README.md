@@ -1,3 +1,5 @@
+<h2>Greenlight — JSON API для получения и управления информацией о фильмах. 
+<h3>Greenlight API will support the following endpoints and actions:
 <p>GET /v1/healthcheck Show application health and version information
 <p>GET /v1/movies Show the details of all movies
 <p>POST /v1/movies Create a new movie
