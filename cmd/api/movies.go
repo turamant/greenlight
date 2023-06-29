@@ -22,12 +22,11 @@ func (app *application) showMovieHandler(w http.ResponseWriter, r *http.Request)
 		ID: id,
 		CreatedAt: time.Now(),
 		Title: "Титаник",
-		Year: 1997,
 		Runtime: 99,
 		Genres: []string{"drama", "romance", "war"},
 		Version: 1,
 	}
-	err = app.writeJSON(w, http.StatusOK, movie, nil)
+	err = app.writeJSON(w, http.StatusOK, envelope{"movie": movie}, nil)
 	if err != nil {
 		app.logger.Println(err)
 		http.Error(w, "The server encountered a problem and could not process your request", http.StatusInternalServerError)
